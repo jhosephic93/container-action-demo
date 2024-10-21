@@ -27,6 +27,10 @@ jobs:
       - name: Containerized Build
         uses: ./.github/actions/
 
+      # List files in the workspace to check what files are present
+      - name: List files in workspace
+        run: ls -la ${{ github.workspace }}
+
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
